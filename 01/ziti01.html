@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+					p.tooltip {
+						color:skyblue;
+						position:relative;
+					}
+					p.tootip::after{
+						content:attr(title);
+						word-break:keep-all;
+						position:absolute;
+						padding:4px 16px;
+						color:#fff;
+						background:#00;
+						border-radius:10px;
+						top:-3px;
+						border:1px solid black;
+						opacity:0;
+						transition:all 1s;
+					}
+					p.tooltip:hover::after{
+						opacity:1;
+						left:calc(100%+8px);
+					}
+		</style>
+	</head>
+	<body>
+		<p>Java是一门面向<span title="很重要" class="tooltip">对象</span>编程语言,不仅吸收了<span title="也不错" class="tooltip">c/c++</span>语言的各种优点，还摒弃了其中的复杂性。</p>
+	</body>
+</html>
